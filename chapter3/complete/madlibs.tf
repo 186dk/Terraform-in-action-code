@@ -16,6 +16,7 @@ terraform {
   }
 }
 
+# if thers is no default value, you must provide a value for the variable in the terraform.tfvars file
 variable "words" {
   description = "A word pool to use for Mad Libs"
   type = object({
@@ -28,7 +29,7 @@ variable "words" {
 }
 
 variable "num_files" {
-  default = 100
+  default = 10
   type    = number
 }
 
